@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Spartan:wght@600;800&family=Roboto:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 10vh;
+  background-color: #2db357;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  height: 80px;
+  width: 80px;
+}
+
+.nav-head {
+  font-family: "Spartan", sans-serif;
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #544531;
+}
+
+.tagline {
+  margin-top: 12px;
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.nav-items {
+  min-width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-items li {
+  list-style: none;
+  font-size: 1.2vw;
+  transition: transform 0.3s ease;
+}
+
+.nav-items li:hover {
+  text-shadow: 2px 2px #636363;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.nav-items a {
+  color: #ebebeb;
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cart {
+  color: #d8d8d8;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cart:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+/* Features */
+.features {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  min-height: 20vh;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.feature {
+  width: 20%;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature i {
+  font-size: 50px;
+  color: #48be6c;
+  margin: 30px;
+}
+
+.feature h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.feature p {
+  font-size: 16px;
+}
+
+/* Categories */
+.categories {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.header {
+  margin: 50px;
+}
+
+.cat-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cat-item {
+}
+
+.cat-item img {
+  height: 250px;
+  border-radius: 30px;
+}
+
+.cat-item h4 {
+  margin: 20px;
+}
+
+/* Testimonials */
+.testimonials {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 50px;
+  text-align: center;
+}

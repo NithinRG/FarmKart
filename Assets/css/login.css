@@ -115,6 +115,7 @@ body {
   margin: auto;
   font-size: 24px;
   margin-bottom: 30px;
+  font-weight: 500;
 }
 
 .l-section img {
@@ -125,5 +126,78 @@ body {
 .r-section {
   background-color: #fa8f42;
   width: 50%;
-  padding: 30px;
+  padding-top: 100px;
+}
+
+.r-section i {
+  position: absolute;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.r-section input {
+  padding: 20px;
+  padding-left: 50px;
+  width: 70%;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: none;
+  outline-style: none;
+  font-size: 20px;
+}
+
+.forgot-pw {
+  font-size: 14px;
+  width: 70%;
+  margin: auto;
+  margin-top: -10px;
+  text-align: right;
+}
+
+.forgot-pw a {
+  color: white;
+  text-decoration: none;
+}
+
+.forgot-pw a:hover {
+  color: #ff4d4d;
+}
+
+.login-btn {
+  padding: 10px 40px;
+  border-radius: 12px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  background-color: #f3e141;
+  margin: 25px auto;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  outline-style: none;
+  cursor: pointer;
+}
+
+.login-btn:active {
+  color: #ff4d4d;
+}
+
+.create-ac {
+  color: white;
+  margin-top: 40px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.create-ac p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.create-ac a {
+  color: #272727;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.create-ac a:hover {
+  color: #ff4d4d;
 }

@@ -12,6 +12,7 @@ body {
 
 /* Navbar */
 .navbar {
+  position: relative;
   font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;

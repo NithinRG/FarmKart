@@ -118,72 +118,36 @@ body {
   font-weight: bold;
 }
 
-/*Address Details*/
+/*Payment box*/
 .container {
-  display: flex;
-  width: 80%;
+  background-color: black;
+  width: 45%;
   margin: auto;
   margin-top: 60px;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
-.l-section {
-  font-family: "Montserrat", sans-serif;
-  background-color: rgba(250, 143, 66, 0.17);
-  width: 50%;
-  padding: 30px;
+.container p,
+.container h3 {
+  color: white;
 }
 
-.l-section p,
-.title {
-  letter-spacing: 2px;
-  font-size: 24px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  text-align: left;
+.container h3 {
+  font-size: 30px;
+  padding-bottom: 20px;
 }
 
-.l-section input {
-  padding: 18px 20px;
-  padding-left: 30px;
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: none;
-  outline-style: none;
-  font-size: 20px;
-}
-
-/*Payment Details*/
-.r-section {
-  font-family: "Montserrat", sans-serif;
-  width: 50%;
-  padding-top: 100px;
-}
-
-.t-section {
-  background-color: rgba(250, 143, 66, 0.17);
-  margin-left: 100px;
-  padding: 20px 20px;
-  text-align: left;
-  font-size: 20px;
-}
-
-.t-section p {
-  padding-bottom: 10px;
-}
-
-/*Pay Button*/
-.r-section button {
+/*button*/
+button {
   width: 300px;
   border-radius: 5px;
-  padding: 15px;
+  padding: 15px 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 24px;
-  margin: 40px 169px;
+  margin: 40px 540px;
   border: none;
   cursor: pointer;
   outline: none;
@@ -191,6 +155,6 @@ body {
   color: white;
 }
 
-.r-section button:active {
+button:active {
   color: #2db357;
 }

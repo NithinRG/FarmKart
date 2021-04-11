@@ -140,19 +140,20 @@ body {
 
 /*button*/
 button {
-  width: 300px;
+  width: 350px;
   border-radius: 5px;
   padding: 15px 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 24px;
-  margin: 40px 540px;
+  margin: 40px 500px;
   border: none;
   cursor: pointer;
   outline: none;
   background-color: #2db357;
   color: white;
+  font-weight: bold;
 }
 
 button:active {

@@ -189,6 +189,7 @@ body {
   outline: none;
   background-color: #2db357;
   color: white;
+  font-weight: bold;
 }
 
 .r-section button:active {

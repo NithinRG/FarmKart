@@ -86,95 +86,49 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Product Details */
+/* My profile */
 .container {
-  display: flex;
+  background: rgba(250, 143, 66, 0.17);
+  width: 80%;
   margin: auto;
-  margin-top: 10px;
-  text-align: center;
+  margin-top: 60px;
+  padding: 20px 20px 10px 20px;
 }
-/*Product Image*/
+.heading {
+  font-size: 20px;
+  font-weight: 800;
+  padding-bottom: 10px;
+}
+.section {
+  display: flex;
+}
+.section p {
+  font-size: 17px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
 .l-section {
-  width: 60%;
-  padding: 30px;
+  width: 90%;
 }
 
-.l-section img {
-  width: 60%;
-  margin-bottom: 30px;
-  border-radius: 30px;
-}
-
-.img-product {
-  margin: 50px auto;
-}
-
-/*Product Info*/
 .r-section {
   width: 80%;
-  padding-top: 100px;
-  text-align: left;
 }
 
-.r-section p {
-  padding-top: 20px;
+.profile img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
 
-.r-section a {
-  text-decoration: none;
-  color: #636363;
-}
-
-.r-section button {
-  border-radius: 5px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-.quantity button {
-  background-color: #fa8f42;
-}
-
-.quantity box {
-  border-radius: 5px;
-  padding: 15px 32px;
-  background-color: #fa8f42;
-}
-
-.r-section .cart-button {
-  padding-left: 100px;
-}
-.cart-button button {
-  background-color: #2db357;
-  color: white;
-}
-
-.quantity button:active {
-  color: #fa8f42;
-}
-
-.cart-button button:active {
-  color: #2db357;
-}
-
-/*Similar Products */
-.b-section h4 {
-  padding: 20px;
-  text-align: left;
-  font-size: 20px;
-}
+/* Crop Portfolio */
 .items {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  padding-bottom: 20px;
+}
+.item {
+  margin-right: 30px;
 }
 
 .item img {
@@ -189,4 +143,30 @@ body {
 .item p {
   font-size: 15px;
   font-weight: 500;
+  padding-bottom: 0px;
+}
+
+/* Button */
+.button {
+  display: flex;
+  margin: auto;
+}
+.button button {
+  background-color: #2db357;
+  color: white;
+  border-radius: 5px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 50px 80px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  font-weight: bold;
+}
+
+.button button:active {
+  color: #2db357;
 }

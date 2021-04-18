@@ -88,54 +88,74 @@ body {
 
 /*Top*/
 .container-top {
-    position: relative;
-    width: 80%;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: center;
+  position: relative;
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: left;
+  font-weight: 800;
+  font-size: 20px;
 }
 
 /* Mid */
 .container-mid {
-    background: rgba(250, 143, 66, 0.17);
-    width: 80%;
-    margin: auto;
-    padding: 20px 20px 20px 20px;
-  }
+  background: rgba(250, 143, 66, 0.17);
+  width: 80%;
+  margin: auto;
+  padding: 20px 20px 20px 20px;
+}
+
+.container-mid p {
+  font-size: 18px;
+  font-weight: 500;
+}
 
 .category-1 {
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 10px;
-    
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.category-1 input{
-    height: 200px;
-    border-radius: 30px;
+.category-1 input {
+  height: 200px;
+  border-radius: 30px;
 }
 
-.grid-container{
-    display: grid;
-    grid-template-columns: 0.75fr 1fr;
-    grid-gap: 5px;
-
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  grid-gap: 10px;
 }
-.grid-child {
-    font-size: medium;
-    padding: 10px;
-      
+
+#month-list,
+#district-list,
+#soil-list {
+  font-size: 18px;
+  background-color: rgba(196, 196, 196, 0.4);
+  width: 200px;
 }
 
 /* Bottom */
 .container-bot {
-    position: relative;
-    width: 80%;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: center;
+  display: flex;
+  margin: auto;
 }
-  
+
+.container-bot button {
+  margin: 30px 550px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 15px 32px;
+  background-color: #2db357;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}

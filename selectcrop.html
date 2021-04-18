@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<htm lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="/Assets/Img/logo.ico" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/Assets/css/selectcrop.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="/Assets/Img/logo.png" alt="">
+        </div>
+        <div class="nav-head">FarmKart<span class="tagline">Think fresh. Think FarmKart.</span></div>
+        
+        <ul class="nav-items">
+            <li>
+                <a href="#">HOME</a>
+            </li>
+            <li>
+                <a href="#">ABOUT</a>
+            </li>
+            <li>
+                <a href="#">CONTACT</a>
+            </li>
+            <li>
+                <a href="#">LOGIN</a>
+            </li>
+        </ul>
+        <div class="cart">
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+    </div>
+
+    
+    <!-- Top section  -->
+    <div class="container-top">
+        <h2>Based on your inputs, we will select suitable crops for your farm</h2>
+    </div>
+
+    <!-- Mid section  -->
+    <div class="container-mid">
+        <div class="mid-section">
+            <h3>Choose your category</h3>
+            <form action="">
+                <div class="category-1">
+                    <div class="Vegetables">
+                        <input type="image" img src="/Assets/Img/placeholder.webp" alt="Submit" width="" height="">
+                    </div>
+                    <div class="Fruits">
+                        <input type="image" img src="/Assets/Img/placeholder.webp" alt="Submit" width="" height="">
+                    </div>
+                    <div class="Pulses and Cereals">
+                        <input type="image" img src="/Assets/Img/placeholder.webp" alt="Submit" width="" height="">
+                    </div>
+                </div>
+                <div class="grid-container">
+                 <div class="grid-child detail">
+                    <h4>When are you planning to start?</h4>
+                 </div>
+                 <div class="grid-child list" id="list1" style="">
+                    <select id='month-list' onchange="show_month()">
+                    <option value=''>--Select Month--</option>
+                    <option selected value='1'>Janaury</option>
+                    <option value='2'>February</option>
+                    <option value='3'>March</option>
+                    <option value='4'>April</option>
+                    <option value='5'>May</option>
+                    <option value='6'>June</option>
+                    <option value='7'>July</option>
+                    <option value='8'>August</option>
+                    <option value='9'>September</option>
+                    <option value='10'>October</option>
+                    <option value='11'>November</option>
+                    <option value='12'>December</option>
+                    </select> 
+                 </div>
+                 <div class="grid-child detail">
+                    <h4>District</h4>
+                 </div>
+                 <div class="grid-child list" id="list2" style="">
+                    <select id='district-list' onchange="show_month()">
+                    <option value=''>--Select District--</option>
+                    <option selected value='1'>Alappuzha</option>
+                    <option value='2'>Ernakulam</option>
+                    <option value='3'>Idukki</option>
+                    <option value='4'>Kannur</option>
+                    <option value='5'>Kasaragod</option>
+                    <option value='6'>Kollam</option>
+                    <option value='7'>Kottayam</option>
+                    <option value='8'>Kozhikode</option>
+                    <option value='9'>Malapuram</option>
+                    <option value='10'>Palakad</option>
+                    <option value='11'>Pathanamthitta</option>
+                    <option value='12'>Thiruvananthapuram</option>
+                    <option value='13'>Thrissur</option>
+                    <option value='14'>Wayanad</option>
+                    </select> 
+                 </div>
+                 <div class="grid-child detail">
+                    <h4>Soil Type</h4>
+                 </div>
+                 <div class="grid-child list" id="list3" style=" ">
+                    <select id='soil-list' onchange="show_month()">
+                    <option value=''>--Select Soil Type--</option>
+                    <option selected value='1'>Acid Saline</option>
+                    <option value='2'>Black Cotton</option>
+                    <option value='3'>Coastal Alluvium</option>
+                    <option value='4'>Hill</option>
+                    <option value='5'>Kari</option>
+                    <option value='6'>Laterite</option>
+                    <option value='7'>Mixed Alluvium</option>
+                    <option value='8'>Red</option>
+                    </select> 
+                 </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bottom section  -->
+    <div class="container-bot">
+        <a href="#">Search for result</a>   
+        <i class="fas fa-search"></i>       
+    </div>
+</body>    
+</head>
+</htm>

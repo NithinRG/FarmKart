@@ -102,13 +102,12 @@ body {
 .search-bar input {
   padding: 18px 20px;
   padding-left: 50px;
-  width: 400px;
+  width: 65%;
   margin-bottom: 20px;
   border-radius: 15px;
   border: none;
   outline-style: none;
   font-size: 20px;
-  /* background-color: aqua; */
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 

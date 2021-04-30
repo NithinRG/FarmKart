@@ -128,6 +128,11 @@ body {
   margin: 50px auto;
 }
 
+.img-edit {
+  height: 300px;
+  width: 80%;
+}
+
 .r-section {
   background-color: #fa8f42;
   width: 50%;
@@ -138,6 +143,19 @@ body {
   position: absolute;
   padding: 20px;
   font-size: 20px;
+}
+
+#Category {
+  font-size: 20px;
+  background-color: white;
+  height: 60px;
+  width: 310px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  padding-left: 50px;
+  color: #797878;
+  font-family: "Roboto", sans-serif;
 }
 
 .r-section input {

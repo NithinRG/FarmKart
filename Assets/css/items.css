@@ -118,15 +118,15 @@ body {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 22px;
   justify-content: space-between;
 }
 
 .itemcard {
-  height: 400px;
+  height: 420px;
   width: 300px;
-  margin: 40px auto;
+  margin: 0px auto 20px;
   background-color: #e2ffce;
-  /* border: 1px solid brown; */
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in-out;
@@ -143,7 +143,6 @@ body {
   width: 100%;
   height: 50%;
   object-fit: cover;
-  /* margin: 10% 15%; */
   margin-bottom: 20px;
   border-radius: 10px 10px 0 0;
 }
@@ -158,18 +157,24 @@ body {
   text-align: center;
   font-size: 24px;
   color: #11ad43;
-  margin: 10px auto 25px;
+  margin: 10px auto;
+}
+.quantity {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 100;
+  font-family: "Poppins", sans-serif;
 }
 
 .producer {
   text-align: center;
   font-size: 16px;
   font-weight: 100;
-  margin-top: 20px;
   font-family: "Poppins", sans-serif;
 }
 
-.farmername {
+.farmername,
+.qty {
   font-weight: 500;
 }
 

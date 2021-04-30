@@ -93,6 +93,7 @@ body {
   margin: auto;
   margin-top: 60px;
   padding: 20px 20px 10px 20px;
+  font-family: "Poppins", sans-serif;
 }
 .heading {
   font-size: 20px;
@@ -126,6 +127,7 @@ body {
   display: flex;
   justify-content: space-around;
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 .item {
   margin-right: 30px;
@@ -169,4 +171,8 @@ body {
 
 .button button:active {
   color: #2db357;
+}
+
+sub {
+  margin-left: -8px;
 }

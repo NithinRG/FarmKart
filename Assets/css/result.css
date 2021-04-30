@@ -87,6 +87,7 @@ body {
 }
 
 /* Content */
+/* Heading */
 .heading {
   text-align: center;
   margin: 50px auto;
@@ -96,6 +97,7 @@ body {
   color: #414141;
 }
 
+/* List */
 .crops {
   display: flex;
   justify-content: space-between;
@@ -149,10 +151,45 @@ body {
   color: #fd1e00;
 }
 
+/* Crop details */
 .cropdetail {
-  width: 60%;
+  width: 70%;
   margin: auto;
-  background-color: cadetblue;
+  padding: 20px 20px;
+  background-color: rgba(250, 143, 66, 0.17);
   border: 1px solid brown;
+  text-align: left;
+  font-size: 18px;
+}
+
+.cropdetail h1 {
+  font-size: 30px;
+}
+
+.price {
+  padding-bottom: 10px;
+}
+
+.container-bot button {
+  margin: 30px 43%;
+  width: 15%;
   text-align: center;
+  border-radius: 5px;
+  padding: 15px 32px;
+  background-color: #2db357;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+}
+sub {
+  margin-left: -8px;
+}
+
+.container-bot button:active {
+  color: #2db357;
 }

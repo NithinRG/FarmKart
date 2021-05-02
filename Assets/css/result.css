@@ -171,7 +171,8 @@ body {
 }
 
 .container-bot button {
-  margin: 30px 43%;
+  display: block;
+  margin: 30px auto;
   width: 15%;
   text-align: center;
   border-radius: 5px;
@@ -179,7 +180,6 @@ body {
   background-color: #2db357;
   color: white;
   text-decoration: none;
-  display: inline-block;
   font-size: 18px;
   border: none;
   cursor: pointer;

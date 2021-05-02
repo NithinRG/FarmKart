@@ -181,15 +181,16 @@ body {
   padding: 15px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 24px;
-  margin: 40px 169px;
+  margin: 40px auto;
   border: none;
   cursor: pointer;
   outline: none;
   background-color: #2db357;
   color: white;
   font-weight: bold;
+  transform: translate(50px);
 }
 
 .r-section button:active {

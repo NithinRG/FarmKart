@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'img/logo.ico') }}" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/cart.css') }}">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+
+    {% if session['cartCount'] == 0 %}
+    <!-- Cart empty -->
+    <div class="cart-empty">
+        <img src="{{ url_for('static', filename = 'img/empty_cart.png') }}" alt="">
+        Your cart is empty
+    </div>
+    {% else %}
+    <!--Header-->
+    <div class="header">
+        <p class="current">CART - - - - </p>
+        <p>ADDRESS </p>
+        <p> - - - - PAYMENT</p>
+        <div class="l-header">
+            <p><i class="fas fa-check-circle"></i>100% Secure</p>
+        </div>
+    </div>
+    
+    <div class="container" data-cart-id="{{cart_id}}">
+
+        <!--Products-->
+        <div class="product">
+            {% for id, item in cart.items() %}
+            <div class="item" data-price="{{item['price']}}" id="item-{{id}}">
+                <div class="l-section">
+                    <img src="{{ url_for('static', filename = 'img/' + item['img'] + '.jpg') }}" class="img-product" alt="">
+                </div>
+                <div class="r-section">
+                    <h2>{{item['name']}}</h2>
+                    <h4>Cultivated by {{item['farmer_name']}}</h4>
+                    <h4>Price: &#8377;{{item['price']}}/kg</h4>
+                    <div class="quantity">
+                        <button type="button" class="minus-btn"><i class="fas fa-minus"></i></button>
+                        <input type="number" min="0.25" max="{{item['max_value']}}" step="0.25" value="{{item['quantity']}}" name="itemCount" class="item-count">
+                        <button type="button" class="plus-btn"><i class="fas fa-plus"></i></button>
+                        <i class="fas fa-trash-alt del-btn" data-item-id="{{id}}"></i>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="place-order">
+
+            <form method="POST">
+                <!--Payment details-->
+                <div class="t-section">
+                    <p class="title">PRICE DETAILS:</p>
+                    <P>Total No. of Items: <span id="num-items"></span></P>
+                    <input type="hidden" name="num-items" id="num-items-input">
+                    <P>Total MRP: &#8377;<span id="MRP"></span></P>
+                    <input type="hidden" name="MRP" id="MRP-input">
+                    <P>Convenience Price: &#8377;30</P>
+                    <P class="total-price">Total Price: &#8377;<span id="total-price"></span></P>
+                    <input type="hidden" name="total-price" id="total-price-input">
+                </div>
+
+                <!--Place Order Button-->
+                <div class="b-section">
+                    <button type="submit"><i class="fas fa-check-circle"></i> Place Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- js -->
+    <script src="{{ url_for('static', filename = 'js/cart.js') }}"></script>
+</body>

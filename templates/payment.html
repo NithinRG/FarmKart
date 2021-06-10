@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'img/logo.ico') }}" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/payment.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+
+    <!--Header-->
+    <div class="header">
+        <p>CART - - - -  ADDRESS  - - - -</p>
+        <p class="current">PAYMENT </p>
+        <div class="l-header">
+            <p><i class="fas fa-check-circle"></i>100% Secure</p>
+        </div>
+    </div>
+    
+    <!--payment box-->
+    <div class="container">
+        <i class="fas fa-check-circle"></i>
+        <h3>Congratulations!!</h3>
+        <p>Order has been placed successfully</p>
+        <p>Check your email for details</p>
+    </div>
+
+    <!--button-->
+    <a href="/">
+        <button>
+            <i class="fas fa-shopping-cart"></i>
+                Continue Shopping
+        </button>
+    </a>
+
+</body>
+</html>

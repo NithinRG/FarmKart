@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portal</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'img/logo.ico') }}" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/portal.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+    
+    <div class=container>
+        <p class=heading>MY PROFILE</p>
+        <div class=section>
+        <div class=l-section>
+            
+            <p>Name: {{farmer['fname']}} {{farmer['lname']}}</p>
+            <p>Place: {{farmer['district']}}</p>
+            <p>Email Id: {{farmer['email']}}</p>
+        </div>
+        <div class=r-section>
+            <p>Age: {{farmer['age']}}</p>
+            <p>Area (in hectares): {{farmer['area']}}</p>
+            <p>Mobile No.: {{farmer['mobile']}}</p>
+        </div>
+   
+        <div class=profile>
+            <img src="{{ url_for('static', filename = 'img/farmer.jpeg') }}" alt="">
+        </div>
+        </div>
+    </div>
+
+    <div class=container>
+        <p class=heading>MY CROP PORTFOLIO</p>
+        {% if crops.count() == 0 %}
+        <div class="no-crops">No items to display</div>
+        {% else %}
+        <div class=section>
+            <div class="items">
+                {% for crop in crops %}
+                <div class="item">
+                    <img src="{{ url_for('static', filename = 'img/' + crop['img'] + '.jpg') }}" alt="">
+                    <h5>{{crop['name']}}</h5>
+                    <p>{{crop['price']}}/kg</p>
+                    <p>Quantity: {{crop['quantity']}}kg </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <div>
+        <div class=section>
+            <div class="button">
+                <a href="/addcrops">
+                    <button>
+                        <i class="fas fa-spa"></i>
+                        <sub><i class="fas fa-plus-circle"></i></sub> Add Produce
+                    </button>
+                </a>
+                <a href="/selectcrop">
+                    <button>
+                        <i class="fas fa-spa"></i>
+                        <sub><i class="fas fa-mouse-pointer"></i></sub> Select Crops
+                    </button>
+                </a>
+                <a href="/editprofile">
+                    <button>
+                        <i class="fas fa-user-edit"></i> Edit Profile
+                    </button>
+                </a>
+            </div>
+    
+        </div>
+     
+    </div>
+
+</body>
+</html>

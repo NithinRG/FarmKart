@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congrats</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'img/logo.ico') }}" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/payment.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+    
+    <!--description-->
+    <div class="container">
+        <i class="far fa-thumbs-up"></i>
+        <h3>Way to Go!!</h3>
+        <p>You have taken your first step as a farmer today. Keep going strong!!</p>
+        <p>Excited to see you soon in our e-farm with your harvest!!</p>
+    </div>
+
+    <!--buttons-->
+    <a href="/selectcrop">
+        <button>
+            <i class="fas fa-search"></i>
+                Continue Searching
+        </button>
+    </a>
+
+    <a href="/portal">
+        <button>
+            <i class="fas fa-tractor"></i>
+                My portal
+        </button>
+    </a>
+    
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'img/logo.ico') }}" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/address.css') }}">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+
+
+    <!--Header-->
+    <div class="header">
+        <p>CART - - - - </p>
+        <p class="current">ADDRESS </p>
+        <P>- - - - PAYMENT</P>
+        <div class="l-header">
+            <p><i class="fas fa-check-circle"></i>100% Secure</p>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <!--Address details-->
+        <div class="l-section">
+            
+            <form action="" class="form">
+                <p>CONTACT DETAILS:</p>
+                <div class="name">
+                    <input type="name" name="" placeholder="NAME">
+                </div>
+                <div class="phoneno">
+                    <input type="phoneno" name="" placeholder="PHONE NUMBER">
+                </div>
+                <p>ADDRESS:</p>
+                <div class="address">
+                    <input type="address" name="" placeholder="HOUSE NO, BUILDING, STREET, AREA">
+                </div>
+                <div class="town">
+                    <input type="town" name="" placeholder="LOCALITY/TOWN">
+                </div>
+                <div class="post">
+                    <input type="post" name="" placeholder="POST OFFICE">
+                </div>
+                <div class="pincode">
+                    <input type="pincode" name="" placeholder="PINCODE">
+                </div>
+            </form>
+        </div>
+
+        
+        <div class="r-section">
+
+            <!--Payment details-->
+            <div class="t-section">
+                <p class="title">PRICE DETAILS:</p>
+                <P>Total No. of Items: {{session['price_details']['num-items']}}</P>
+                <P>Total MRP: &#8377;{{session['price_details']['MRP']}}</P>
+                <P>Convenience Price: &#8377;30</P>
+                <P class="total-price">Total Price: &#8377;{{session['price_details']['total-price']}}</P>
+            </div>
+
+            <!--Pay Button-->
+            <div class="b-section">
+                <a href="/payment">
+                    <button> <i class="far fa-credit-card"> </i> Pay</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

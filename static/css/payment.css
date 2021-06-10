@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Spartan:wght@600;800&family=Roboto:wght@400;500&family=Montserrat:wght@400;500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/*Header*/
+.header {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-left: 310px;
+}
+
+.current {
+    color: #2db357;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header p {
+    font-size: 25px;
+}
+
+.l-header {
+    display: flex;
+    justify-content: end;
+    padding-left: 150px;
+}
+.l-header img {
+    width: 80px;
+}
+
+.l-header p {
+    color: #0db04b;
+    font-weight: bold;
+}
+
+/*Payment box*/
+.container {
+    background-color: #544531;
+    width: 45%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.container i {
+    color: #fff;
+    font-size: 7rem;
+    margin-bottom: 20px;
+}
+
+.container p,
+.container h3 {
+    color: white;
+}
+
+.container h3 {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.container p {
+    font-size: 18px;
+    line-height: 2.5ch;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*button*/
+button {
+    display: block;
+    margin: 30px auto;
+    width: 350px;
+    border-radius: 5px;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #2db357;
+    color: white;
+    font-weight: bold;
+}
+
+button:active {
+    color: #808080;
+}

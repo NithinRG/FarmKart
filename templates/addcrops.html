@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Crops</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'img/logo.ico') }}" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/login.css') }}">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+    
+    {% if session['modalDisplay'] == True %}
+    <!-- Modal -->
+    <div class="modal">
+        Submitted
+    </div>
+    {% endif %}
+    
+    <!-- Add Crops-->
+    <div class="container">
+        <div class="l-section">
+            <h2>Add Crops</h2>
+            <p>Brand your fresh agricultural produces in our e-market at your price!!</p>
+            <img src="{{ url_for('static', filename = 'img/market.png') }}" class="img-addcrops" alt="">
+        </div>
+        <div class="r-section">
+            <form method="POST">
+                <div class="category">              
+                    <select name="category" required id="category">
+                        <option value="" disabled selected>Choose Category</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Pulses">Pulses</option>
+                    </select>
+                </div>
+                <div class="product">              
+                    <select name="product" required id="product">
+                        <option value="" disabled selected>Choose Product</option>
+                    </select>
+                </div>
+                <div class="quantity">
+                    <input type="number" required name="quantity" placeholder="Quantity">
+                </div>
+                <div class="description">
+                    <input type="text" required name="description" placeholder="Description">
+                </div>
+                <div class="price">
+                    <input type="number" required name="price" placeholder="Price/Kg">
+                </div>
+                
+                <button type="submit" class="login-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="{{ url_for('static', filename = 'js/addcrops.js') }}"></script>
+
+</body>
+</html>

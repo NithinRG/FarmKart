@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'img/logo.ico') }}" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/login.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+    
+    <!-- Login form -->
+    <div class="container">
+        <div class="l-section">
+            <h2>Login</h2>
+            <p>Get access to your daily dose of delicious fruits & veggies!!!</p>
+            <img src="{{ url_for('static', filename = 'img/login-page.png') }}" class="img-login" alt="">
+        </div>
+        <div class="r-section">
+            <form method="post">
+                <div id="incorrect">{{ incorrect }}</div>
+                <div class="email">
+                    <i class="fas fa-user"></i>
+                    <input type="email" required name="email" placeholder="Email id">
+                </div>
+                <div class="password">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" required name="password" placeholder="Password">
+                </div>
+                <div class="forgot-pw">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <div class="create-ac">
+                    <p>New to FarmKart?</p>
+                    <a href="/signup">Create an account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

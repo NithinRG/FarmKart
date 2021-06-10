@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Crop</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'img/logo.ico') }}" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/selectcrop.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+    
+    <!-- Top section  -->
+    <div class="container-top">
+        <h2>Based on your inputs, we will suggest suitable crops for your farm</h2>
+    </div>
+
+    <!-- Mid section  -->
+    <div class="container-mid">
+        <div class="mid-section">
+            <h3>Choose your category</h3>
+            <form method="POST">
+                <div class="category-1">
+                    <div class="item Fruits" id="Fruit">
+                        <img src="{{ url_for('static', filename = 'img/fruits.jpg') }}" class="img-selected" alt="Fruits">
+                        <p>Fruits</p>
+                    </div>
+                    <div class="item Vegetables" id="Vegetable">
+                        <img src="{{ url_for('static', filename = 'img/vegetables.jpg') }}" alt="Vegetables">
+                        <p>Vegetables</p>
+                    </div>
+                    <div class="item Pulses" id="Pulse">
+                        <img src="{{ url_for('static', filename = 'img/pulses.jpg') }}" alt="Pulses">
+                        <p>Pulses & Cereals</p>
+                    </div>
+                    <input type="text" name="category" id="cat-input" value="Fruit">
+                </div>
+                <div class="grid-container">
+                 <div class="grid-child-detail">
+                    <p>When are you planning to start?</p>
+                 </div>
+                 <div class="grid-child-list" id="list1" >
+                     <input type="date" name="month" min="2021-06-01" max="2022-06-31" required pattern="\d{2}-\d{2}-\d{4}" id='month-list'>
+                    <!-- <select name="month" required>
+                        <option selected value=''>--Select Month--</option>
+                        <option value='Janaury'>Janaury</option>
+                        <option value='February'>February</option>
+                        <option value='March'>March</option>
+                        <option value='April'>April</option>
+                        <option value='May'>May</option>
+                        <option value='June'>June</option>
+                        <option value='July'>July</option>
+                        <option value='August'>August</option>
+                        <option value='September'>September</option>
+                        <option value='October'>October</option>
+                        <option value='November'>November</option>
+                        <option value='December'>December</option>
+                    </select>  -->
+                 </div>
+                 <div class="grid-child-detail">
+                    <p>District:</p>
+                 </div>
+                 <div class="grid-child-list" id="list2" >
+                    <select id='district-list' name="district" required>
+                        <option selected value=''>--Select District--</option>
+                        <option value='Alappuzha'>Alappuzha</option>
+                        <option value='Ernakulam'>Ernakulam</option>
+                        <option value='Idukki'>Idukki</option>
+                        <option value='Kannur'>Kannur</option>
+                        <option value='Kasaragod'>Kasaragod</option>
+                        <option value='Kollam'>Kollam</option>
+                        <option value='Kottayam'>Kottayam</option>
+                        <option value='Kozhikode'>Kozhikode</option>
+                        <option value='Malappuram'>Malappuram</option>
+                        <option value='Palakkad'>Palakkad</option>
+                        <option value='Pathanamthitta'>Pathanamthitta</option>
+                        <option value='Thiruvananthapuram'>Thiruvananthapuram</option>
+                        <option value='Thrissur'>Thrissur</option>
+                        <option value='Wayanad'>Wayanad</option>
+                    </select> 
+                 </div>
+                 <div class="grid-child-detail">
+                    <p>Soil Type:</p>
+                 </div>
+                 <div class="grid-child-list" id="list3" >
+                    <select id='soil-list' name="soil" required>
+                        <option selected value=''>--Select Soil Type--</option>
+                        <option value='Acid Saline Soil'>Acid Saline</option>
+                        <option value='Black Cotton Soil'>Black Cotton</option>
+                        <option value='Coastal Alluvium'>Coastal Alluvium</option>
+                        <option value='Forest Soil'>Forest</option>
+                        <option value='Hill Soil'>Hill</option>
+                        <option value='Kari'>Kari</option>
+                        <option value='Laterite Soil'>Laterite</option>
+                        <option value='Mixed Alluvium'>Mixed Alluvium</option>
+                        <option value='Red Soil'>Red</option>
+                    </select> 
+                 </div>
+                </div>
+                <div class="container-bot">
+                    <button type="submit"><i class="fas fa-search"></i> Search for result</button>         
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="{{ url_for('static', filename = 'js/selectcrop.js') }}"></script>
+
+</body>    
+</html>

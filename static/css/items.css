@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Spartan:wght@600;800&family=Roboto:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  width: 40%;
+  margin: 50px auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.categories a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.category {
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 500;
+  color: #544531;
+  transition: all 0.3s ease-in-out;
+}
+
+.category:hover {
+  transform: scale(1.2);
+}
+
+.cat-active {
+  color: #2db357;
+}
+
+/* Search bar */
+.search-bar {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.search-bar i {
+  position: absolute;
+  padding: 18px;
+  font-size: 24px;
+}
+
+.search-bar input {
+  padding: 18px 20px;
+  padding-left: 50px;
+  width: 65%;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border: none;
+  outline-style: none;
+  font-size: 20px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Item grid */
+.itemgrid {
+  width: 70%;
+  margin: auto;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 22px;
+  justify-content: space-between;
+}
+
+.itemgrid a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.itemcard {
+  height: 420px;
+  width: 300px;
+  margin: 0px auto 20px;
+  background-color: #e2ffce;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s ease-in-out;
+}
+
+.itemcard:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.item-img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.item-name {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.price {
+  text-align: center;
+  font-size: 24px;
+  color: #11ad43;
+  margin: 10px auto;
+}
+.quantity {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+}
+
+.producer {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 100;
+  font-family: "Poppins", sans-serif;
+}
+
+.farmer-name,
+.qty {
+  font-weight: 500;
+}
+
+.farmer-img {
+  display: block;
+  margin: auto;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 50px;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmKart</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'img/logo.ico') }}" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/carousel.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <i class="fas fa-chevron-left" id="prevBtn"></i>
+        <i class="fas fa-chevron-right" id="nextBtn"></i>
+        <div class="carousel-slider">
+            <img src="{{ url_for('static', filename = 'img/img3.jpeg') }}" id="lastClone" alt="">
+            <img src="{{ url_for('static', filename = 'img/img1.jpeg') }}" alt="">
+            <img src="{{ url_for('static', filename = 'img/img2.jpeg') }}" alt="">
+            <img src="{{ url_for('static', filename = 'img/img3.jpeg') }}" alt="">
+            <img src="{{ url_for('static', filename = 'img/img1.jpeg') }}" id="firstClone" alt="">
+        </div>
+    </div>
+    
+    <!-- Features -->
+    <div class="features">
+        <div class="feature">
+            <i class="far fa-check-circle fa-lg"></i>
+            <div>
+                <h3>100% Organic</h3>
+                <p>Products only from certified 100% organic farms and organic food manufacturers.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <i class="far fa-money-bill-alt fa-lg"></i>
+            <div>
+                <h3>Fair Price Guaranteed</h3>
+                <p>High quality organic fruits and vegetables at affordable low prices.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <i class="fas fa-shipping-fast fa-lg"></i>
+            <div>
+                <h3>Fast and Fresh</h3>
+                <p>We guarantee premium quality products and always fresh organic fruit & vegetables.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <i class="far fa-handshake fa-lg"></i>
+            <div>
+                <h3>Supporting Farmers</h3>
+                <p>Supports farmers throughout the state by helping them cultivate smart.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+        <h2 class="header">EXPLORE BY CATEGORY</h2>
+        <div class="cat-container">
+            <div class="cat-items">
+                <a href="/fruits">
+                    <div class="cat-item">
+                        <img src="{{ url_for('static', filename = 'img/fruits.jpg') }}" alt="">
+                        <h4>Fruits</h4>
+                    </div>
+                </a>
+                <a href="/vegetables">
+                    <div class="cat-item">
+                        <img src="{{ url_for('static', filename = 'img/vegetables.jpg') }}" alt="">
+                        <h4>Vegetables</h4>
+                    </div>
+                </a>
+                <a href="/pulses">
+                    <div class="cat-item">
+                        <img src="{{ url_for('static', filename = 'img/pulses.jpg') }}" alt="">
+                        <h4>Pulses</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <!-- <div class="testimonials">
+        <h2 class="header">WHAT OUT CUSTOMERS SAY</h2>
+        <hr>
+    </div> -->
+
+    <!-- Contact form -->
+    <div class="contact" id="contact">
+        <div class="contact-form">
+            <h2 class="header">GET IN TOUCH</h2>
+            <hr>
+            <form action="">
+                <div class="form-container">
+                    <input type="text" name="name" class="form-control" id="name" required placeholder="Name">
+                    <input type="text" name="email" class="form-control" id="email" required placeholder="Email">
+                    <textarea name="message" class="form-control" id="message" rows="4" required placeholder="Message"></textarea>
+                    <button class="submit-btn" type="submit">SEND MESSAGE</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="{{ url_for('static', filename = 'js/carousel.js') }}"></script>
+
+</body>
+</html>

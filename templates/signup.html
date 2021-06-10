@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'img/logo.ico') }}" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/login.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+    
+    <!-- Login form -->
+    <div class="container">
+        <div class="l-section">
+            <h2>SignUp</h2>
+            <p>Create your account today to stay connected with the farmers</p>
+            <img src="{{ url_for('static', filename = 'img/signup-page.png') }}" class="img-signup" alt="">
+        </div>
+        <div class="r-section">
+            <form method="post">
+                <div id="incorrect">{{ incorrect }}</div>
+                <div class="name-section">
+                    <div class="name">
+                        <input type="text" required name="fname" placeholder="First Name">
+                    </div>
+                    <div class="name">
+                        <input type="text" required name="lname" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="email">
+                    <input type="email" required name="email" placeholder="Email id">
+                </div>
+                <div class="password">
+                    <input type="password" id="password" required name="password" placeholder="Password">
+                </div>
+                <div class="password">
+                    <input type="password" id="confirm" required name="confirm" placeholder="Confirm password">
+                </div>
+                <div id="message"></div>
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="{{ url_for('static', filename = 'js/signup.js') }}"></script>
+
+</body>
+</html>

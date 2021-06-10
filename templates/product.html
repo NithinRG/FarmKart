@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'img/logo.ico') }}" type = "image/x-icon">
+
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/25865fe488.js" crossorigin="anonymous"></script>  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/product.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    {% include 'nav.html' %}
+
+    <!-- Categories -->
+    <div class="categories">
+        <a href="/fruits">
+            {% if item['type'] == 'fruit' %}
+            <div class="category cat-active">Fruits</div>
+            {% else %}
+            <div class="category">Fruits</div>
+            {% endif %}
+        </a>
+        <a href="/vegetables">
+            {% if item['type'] == 'vegetable' %}
+            <div class="category cat-active">Vegetables</div>
+            {% else %}
+            <div class="category">Vegetables</div>
+            {% endif %}
+        </a>
+        <a href="/pulses">
+            {% if item['type'] == 'pulse' %}
+            <div class="category cat-active">Pulses</div>
+            {% else %}
+            <div class="category">Pulses</div>
+            {% endif %}
+        </a>
+    </div>
+
+    {% if session['modalDisplay'] == True %}
+    <!-- Modal -->
+    <div class="modal">
+        Added to cart
+    </div>
+    {% endif %}
+
+
+    <!--Product Details-->
+    <div class="container">
+        <div class="l-section">
+            <img src="{{ url_for('static', filename = 'img/' + item['img'] + '.jpg') }}" class="img-product" alt="">
+        </div>
+        <div class="r-section">
+            <h1>{{item['name']}}</h1>
+            <h3>Price: &#8377;{{item['price']}}/kg</h3>
+            <h3>Quantity Available: <span id="quantity">{{item['quantity']}}</span>kg</h3>
+            <p>Produced freshly in the fields of Thrissur, Purely Organic</p>
+            <p>Seller: {{item['farmer_name']}}</p>
+            <a href="#">
+                <img src="{{ url_for('static', filename = 'img/farmer.jpeg') }}" alt="" class="farmer-img">
+            </a>
+            <form method="POST">
+                <div class="container">
+                    <div class="quantity">
+                        <button type="button" id="minus-btn"><i class="fas fa-minus"></i></button>
+                        <input type="number" min="0.25" max="{{item['quantity']}}" step="0.25" value="1" name="itemCount" id="item-count">
+                        <button type="button" id="plus-btn"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="cart-button">
+                        {% if in_cart %}
+                        <button type="submit"><i class="fas fa-shopping-cart"></i><b> Update quantity</b></button>
+                        {% else %}
+                        <button type="submit"><i class="fas fa-shopping-cart"></i><b> Add to cart</b></button>
+                        {% endif %}
+                    </div>
+                    {% if in_cart %}
+                    <div class="in-cart">Already in cart</div>
+                    {% endif %}
+                </div>
+            </form>
+        </div>
+    </div>
+
+   <!--Similar Products-->
+    <div class="b-section">
+        {% if similarItems.count() > 1 %}
+        <h4>SIMILAR PRODUCTS</h4>
+            <div class="items">
+                {% for similarItem in similarItems %}
+                    {% if similarItem['_id'] != item['_id'] %}
+                    <a href="/product/{{similarItem['_id']}}">
+                        <div class="item">
+                            <img src="{{ url_for('static', filename = 'img/' + similarItem['img'] + '.jpg') }}" alt="">
+                            <h5>{{similarItem['name']}}</h5>
+                            <p>&#8377;{{similarItem['price']}}/kg</p>
+                            <p>Seller: {{similarItem['farmer_name']}}</p>
+                        </div>
+                    </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- js -->
+    <script src="{{ url_for('static', filename = 'js/product.js') }}"></script>
+
+</body>
+</html>

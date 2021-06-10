@@ -59,7 +59,7 @@
             <h1>{{item['name']}}</h1>
             <h3>Price: &#8377;{{item['price']}}/kg</h3>
             <h3>Quantity Available: <span id="quantity">{{item['quantity']}}</span>kg</h3>
-            <p>Produced freshly in the fields of Thrissur, Purely Organic</p>
+            <p>{{item['description']}}</p>
             <p>Seller: {{item['farmer_name']}}</p>
             <a href="#">
                 <img src="{{ url_for('static', filename = 'img/farmer.jpeg') }}" alt="" class="farmer-img">

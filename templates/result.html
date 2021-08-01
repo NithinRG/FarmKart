@@ -40,6 +40,7 @@
         <div class="cropdetail {{item['Name']}}">
             <h1 class="name">{{item['Name']}}</h1>
             <div class="price">Predicted market price:- <span id="price">&#8377;{{item['price']}}/kg</span></div>
+            <div class="demand">Market Demand:- <span id="demand">{{item['Demand']}}</span></div>
             <div class="soil">Soil type: 
                 <span id="soil">
                     {% for soil in item['Soil_Type' ] %}

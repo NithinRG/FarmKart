@@ -267,7 +267,7 @@ def result():
             if session.get('factors'):
                 month = datetime.strftime(session['date'], "%B")
                 result_cur = item_details.find({'Type': session['factors']['category'],
-                                               'Sowing_Season': month,
+                                                'Sowing_Season': month,
                                                 'District': session['factors']['district'],
                                                 'Soil_Type': session['factors']['soil']})
                 result_items = []

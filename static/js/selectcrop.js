@@ -1,11 +1,12 @@
 const items = document.getElementsByClassName('item');
 const input = document.getElementById('cat-input')
 
-var today = new Date();
-var dd = today.getDate();
-var mm = today.getMonth()+1; //January is 0!
-var yyyy = today.getFullYear();
-var nextyear=today.getFullYear()+1;
+function functionAddAttribute(){
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    var nextyear=today.getFullYear()+1;
  if(dd<10){
         dd='0'+dd
     } 
@@ -17,6 +18,10 @@ today = yyyy+'-'+mm+'-'+dd;
 next=nextyear+'-'+mm+'-31'
 document.getElementById("month-list").setAttribute("min",today);
 document.getElementById("month-list").setAttribute("max",next);
+};
+
+window.onload = functionAddAttribute;
+
 
 for (let i = 0; i < items.length; i++) {
     items[i].addEventListener('click', () => {

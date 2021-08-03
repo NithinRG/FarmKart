@@ -16,8 +16,8 @@ const input = document.getElementById('cat-input')
 
 today = yyyy+'-'+mm+'-'+dd;
 next=nextyear+'-'+mm+'-31'
-document.getElementById('month-list').setAttribute('min',today);
-document.getElementById('month-list').setAttribute('max',next);
+document.getElementById('month-list').min=today;
+document.getElementById('month-list').max=next;
 
 
 for (let i = 0; i < items.length; i++) {

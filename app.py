@@ -192,8 +192,8 @@ def address():
 def payment():
     if not 'loggedIn' in session:
         return redirect(url_for("login"))
-    # user_cart = carts.find_one({'userId': session['userId']})
-    # console.log(user_cart)
+    user_cart = carts.find_one({'userId': session['userId']})
+    print(user_cart)
     carts.update_one({'userId': session['userId']}, {'$unset': {'cart': ''}})
     session['cartCount'] = 0
     return render_template('payment.html')

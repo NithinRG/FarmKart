@@ -1,7 +1,7 @@
 const items = document.getElementsByClassName('item');
 const input = document.getElementById('cat-input')
 
-var d = new Date(date),
+var d = new Date(),
 month = '' + (d.getMonth() + 1),
 day = '' + d.getDate(),
 year =''+ d.getFullYear();
@@ -9,7 +9,9 @@ if (month.length < 2)
 month = '0' + month;
 if (day.length < 2) 
 day = '0' + day;
-document.getElementById('month-list').min=year+'-'+month+'-'+day;
+date=year+'-'+month+'-'+day
+console.log(date)
+document.getElementById('month-list').min=date;
 
 for (let i = 0; i < items.length; i++) {
     items[i].addEventListener('click', () => {

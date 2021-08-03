@@ -1,7 +1,7 @@
 const items = document.getElementsByClassName('item');
 const input = document.getElementById('cat-input')
 
-function functionAddAttribute(){
+
     var today = new Date();
     var dd = today.getDate();
     var mm = today.getMonth()+1; //January is 0!
@@ -16,11 +16,8 @@ function functionAddAttribute(){
 
 today = yyyy+'-'+mm+'-'+dd;
 next=nextyear+'-'+mm+'-31'
-document.getElementById("month-list").setAttribute("min",today);
-document.getElementById("month-list").setAttribute("max",next);
-};
-
-window.onload = functionAddAttribute;
+document.getElementById('month-list').setAttribute('min',today);
+document.getElementById('month-list').setAttribute('max',next);
 
 
 for (let i = 0; i < items.length; i++) {

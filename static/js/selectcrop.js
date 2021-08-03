@@ -1,16 +1,19 @@
 const items = document.getElementsByClassName('item');
 const input = document.getElementById('cat-input')
 
-var d = new Date(),
-month = '' + (d.getMonth() + 1),
-day = '' + d.getDate(),
-year =''+ d.getFullYear(),
-nextyear=''+(d.getFullYear()+1);
-if (month.length < 2) 
-month = '0' + month;
-if (day.length < 2) 
-day = '0' + day;
-today=year+'-'+month+'-'+day
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+var nextyear=today.getFullYear()+1;
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
 next=nextyear+'-'+month+'-31'
 document.getElementById("month-list").setAttribute("min",today);
 document.getElementById("month-list").setAttribute("max",next);

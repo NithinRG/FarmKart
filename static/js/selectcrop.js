@@ -14,7 +14,7 @@ var nextyear=today.getFullYear()+1;
     } 
 
 today = yyyy+'-'+mm+'-'+dd;
-next=nextyear+'-'+month+'-31'
+next=nextyear+'-'+mm+'-31'
 document.getElementById("month-list").setAttribute("min",today);
 document.getElementById("month-list").setAttribute("max",next);
 

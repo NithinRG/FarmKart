@@ -12,8 +12,8 @@ if (day.length < 2)
 day = '0' + day;
 today=year+'-'+month+'-'+day
 next=nextyear+'-'+month+'-31'
-document.getElementById('month-list').setAttribute("min",today)
-document.getElementById('month-list').setAttribute("max",next)
+document.getElementById("month-list").setAttribute("min",today);
+document.getElementById("month-list").setAttribute("max",next);
 
 for (let i = 0; i < items.length; i++) {
     items[i].addEventListener('click', () => {

@@ -9,7 +9,7 @@ if (month.length < 2)
 month = '0' + month;
 if (day.length < 2) 
 day = '0' + day;
-document.getElementById(date).min=year+month+day;
+document.getElementById('month-list').min=year+'-'+month+'-'+day;
 
 for (let i = 0; i < items.length; i++) {
     items[i].addEventListener('click', () => {

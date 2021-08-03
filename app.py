@@ -87,21 +87,22 @@ def logout():
 
 @app.route("/fruits")
 def fruits():
-    fruits = items_on_sale.find({"type": "fruit"}).sort([("quantity", -1)])
+    fruits = items_on_sale.find(
+        {"type": "fruit", "quantity": {"$gt": 0}}).sort([("quantity", -1)])
     return render_template("items.html", items=fruits, type='fruit')
 
 
 @app.route("/vegetables")
 def vegetables():
     vegetables = items_on_sale.find(
-        {"type": "vegetable"}).sort([("quantity", -1)])
+        {"type": "vegetable", "quantity": {"$gt": 0}}).sort([("quantity", -1)])
     return render_template("items.html", items=vegetables, type='vegetable')
 
 
 @app.route("/pulses")
 def pulses():
     pulses = items_on_sale.find(
-        {"type": "pulse"}).sort([("quantity", -1)])
+        {"type": "pulse", "quantity": {"$gt": 0}}).sort([("quantity", -1)])
     return render_template("items.html", items=pulses, type='pulse')
 
 
@@ -193,7 +194,10 @@ def payment():
     if not 'loggedIn' in session:
         return redirect(url_for("login"))
     user_cart = carts.find_one({'userId': session['userId']})
-    print(user_cart)
+    for key, value in user_cart['cart'].items():
+        print(key, value['quantity'])
+        items_on_sale.update_one({"_id": ObjectId(key)}, {
+                                 '$inc': {'quantity': -float(value['quantity'])}})
     carts.update_one({'userId': session['userId']}, {'$unset': {'cart': ''}})
     session['cartCount'] = 0
     return render_template('payment.html')

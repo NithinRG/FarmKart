@@ -68,11 +68,11 @@ var dict={
 "Mango": 34.59, 
 "Papaya": 23.82,
 "Pineapple": 31.78,
-// "Black gram":
-// "Cow pea":
-// "Green gram":
-// "Red gram":
-// "Rice":
+"Black gram": 104.56,
+"Cow pea": 41.63,
+"Green gram": 104.34,
+"Red gram":79.06,
+"Rice":32.75,
 }
 
 $("#product").on("change", function(){
